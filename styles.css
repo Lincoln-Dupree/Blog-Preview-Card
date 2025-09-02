@@ -1,5 +1,102 @@
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+  color: var(--gray-950);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--yellow);
+}
+
+.main-container {
+  background-color: white;
+  width: 325px;
+  height: 500px;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--gray-950);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 45% 45% 10%;
+  grid-template-areas:
+    "img"
+    "text"
+    "author";
+  box-shadow: 0.5rem 0.5rem 0px 0px var(--gray-950);
+}
+
+.img-container {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.design-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.text-container {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.learning-btn {
+  align-self: flex-start;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 5px;
+  font-weight: 800;
+}
+
+.pub-date {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.text {
+  color: var(--gray-500);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.author-container {
+  grid-area: author;
+  display: flex;
+  align-items: center;
+}
+
+.author-img {
+  width: 2rem;
+  height: auto;
+  margin-right: 0.75rem;
+}
+
+.author-name {
+  font-weight: 800;
 }
